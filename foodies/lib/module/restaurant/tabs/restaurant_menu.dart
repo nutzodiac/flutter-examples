@@ -47,13 +47,15 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: ClampingScrollPhysics(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           GridView.builder(
             shrinkWrap: true,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 1.6)),
+            physics: NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 1.5)),
             itemCount: items.length,
             itemBuilder: (context, index) {
               return Card(
@@ -63,8 +65,11 @@ class _RestaurantMenuState extends State<RestaurantMenu> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(24),
-                      child: Image.asset('assets/images/${items[index]['image']}', fit: BoxFit.fitHeight),
+                      borderRadius: BorderRadius.circular(35.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Image.asset('assets/images/${items[index]['image']}', fit: BoxFit.fitHeight),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10.0),

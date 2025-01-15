@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../components/text/textlabel.dart';
 import '../../../components/toolbar/tabbar.dart';
 import '../tabs/menu_account.dart';
 import '../tabs/menu_favourite.dart';
@@ -62,8 +63,6 @@ class _MainMenuPageState extends State<MainMenuPage> with TickerProviderStateMix
                 Stack(
                   children: [
                     Container(
-                      // height: MediaQuery.of(context).size.height * 0.2,
-                      // width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         image: const DecorationImage(image: AssetImage('assets/images/bg-color.png')),
                       ),

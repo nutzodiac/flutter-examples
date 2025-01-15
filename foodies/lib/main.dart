@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'module/main_menu/view/main_menu_page.dart';
+import 'routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainMenuPage(),
+      routes: Routes.build,
+      initialRoute: Routes.splash,
     );
   }
 }

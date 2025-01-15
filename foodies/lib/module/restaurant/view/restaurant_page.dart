@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../components/text/textlabel.dart';
 import '../../../components/toolbar/restaurantbar.dart';
 import '../tabs/restaurant_coupon.dart';
 import '../tabs/restaurant_gallery.dart';
@@ -62,9 +61,15 @@ class _RestaurantPageState extends State<RestaurantPage> with TickerProviderStat
                   Container(
                     height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width,
+                    alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
                     decoration: BoxDecoration(
                       image: const DecorationImage(image: AssetImage('assets/images/header_restaurant.jpeg'), fit: BoxFit.fitWidth),
                     ),
+                    child: IconButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      icon: Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
+                    )
                   ),
                 ],
               ),
