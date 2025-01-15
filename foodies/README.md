@@ -1,16 +1,6 @@
-# demoapp
+# Foodies
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Example page of the app
+![splash_page](https://github.com/user-attachments/assets/f5648440-ebde-4e50-908f-8e24351bc5c7)
+![main_menu_page](https://github.com/user-attachments/assets/ac9d84ec-8363-4669-94b0-b5a37294f184)
+![restaurant_page](https://github.com/user-attachments/assets/198b3e15-3795-46f5-8793-80dfea8c5cd6)
