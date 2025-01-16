@@ -11,7 +11,10 @@ class RestaurantBarWidget extends StatelessWidget {
     return TabBar(
       controller: controller,
       padding: EdgeInsets.only(top: 10.0),
-      dividerColor: Color.fromARGB(255, 255, 228, 131),
+      indicator: UnderlineTabIndicator(
+        borderSide: BorderSide(width: 5.0, color: Color.fromARGB(255, 255, 228, 131)),
+      ),
+      dividerColor: Colors.transparent,
       tabs: <Widget>[
         TabWidget(
           semanticslabel: 'Menu',

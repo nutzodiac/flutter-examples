@@ -71,9 +71,9 @@ class _MainMenuPageState extends State<MainMenuPage> with TickerProviderStateMix
                 ),
                 Container(
                   key: _tabbarKey,
-                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom > 0 ? 25 : 0, top: 0.0),
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom > 0 ? 15.0 : 0, top: 5.0),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.grey.shade200,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                   ),
                   child: PreferredSize(

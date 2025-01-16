@@ -11,11 +11,10 @@ class TabBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBar(
       controller: controller,
-      padding: EdgeInsets.only(top: 10.0),
       dividerColor: Colors.transparent,
       indicator: BoxDecoration(
         color: const Color.fromARGB(255, 255, 228, 131),
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        shape: BoxShape.circle,
       ),
       tabs: <Widget>[
         TabWidget(
@@ -24,11 +23,11 @@ class TabBarWidget extends StatelessWidget {
         ),
         TabWidget(
           semanticslabel: 'Promotion',
-          imagePath: 'assets/icons/saleanddiscount.svg',
+          imagePath: 'assets/icons/promotion.svg',
         ),
         TabWidget(
           semanticslabel: 'Location',
-          imagePath: 'assets/icons/location.svg',
+          imagePath: 'assets/icons/map.svg',
         ),
         TabWidget(
           semanticslabel: 'Favourite',
@@ -65,12 +64,17 @@ class TabWidget extends StatelessWidget {
       identifier: semanticslabel,
       child: MergeSemantics(
         child: Tab(
+          iconMargin: EdgeInsets.all(0.0),
           icon: icon != null ? Icon(icon, color: Colors.black) 
-          : imagePath != null ? SvgPicture.asset(
-            imagePath!,
-            width:  40,
-            height: 40,
-            colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+          : imagePath != null ? Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: SvgPicture.asset(
+              imagePath!,
+              width: 50,
+              height: 50,
+              colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              fit: BoxFit.contain,
+            ),
           ) : null,
           child: text != null ? Textlabel.custom(
             text: text ?? "",

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../../../components/text/textlabel.dart';
 import '../../../components/toolbar/restaurantbar.dart';
 import '../tabs/restaurant_coupon.dart';
 import '../tabs/restaurant_gallery.dart';
@@ -55,20 +57,62 @@ class _RestaurantPageState extends State<RestaurantPage> with TickerProviderStat
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.2,
                     width: MediaQuery.of(context).size.width,
-                    alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    alignment: Alignment.topLeft,
+                    padding: EdgeInsets.fromLTRB(0.0, 20.0, 20.0, 0.0),
                     decoration: BoxDecoration(
                       image: const DecorationImage(image: AssetImage('assets/images/header_restaurant.jpeg'), fit: BoxFit.fitWidth),
                     ),
-                    child: IconButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      icon: Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            IconButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              padding: EdgeInsets.all(0.0),
+                              icon: Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white),
+                            ),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 20.0),
+                                  child: SvgPicture.asset(
+                                    'assets/icons/share_black.svg',
+                                    width: 24,
+                                    height: 24,
+                                    colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                                    fit: BoxFit.contain,
+                                  )
+                                ),
+                                SvgPicture.asset(
+                                  'assets/icons/heart_outline.svg',
+                                  width: 24,
+                                  height: 24,
+                                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                                  fit: BoxFit.contain,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Textlabel.custom(
+                            text: 'TOKI ITALIAN',
+                            textAlign: TextAlign.center,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            fontSize: 26,
+                          ),
+                        ),
+                      ],
                     )
                   ),
                 ],
