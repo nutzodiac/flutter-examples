@@ -5,9 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SharedPref {
   static SharedPref? _sharedPref;
   static const String languageKey = "LANGUAGE_KEY";
-  static const String g9999 = "G-9999";
-  static const String g9650 = "G-9650";
-  static const String priceStatus = "PRICE_STATE";
   static SharedPref getInstance() {
     _sharedPref ??= SharedPref();
     return _sharedPref!;
