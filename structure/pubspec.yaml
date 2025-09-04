@@ -109,13 +109,6 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/chart/
-    - assets/chart/js/
-    - assets/chart/js/highstock.js
-    - assets/chart/js/themes/dark-unica-custom.js
-    - assets/chart/js/modules/exporting.js
-    - assets/chart/MarketMainChart_2.html
-    - assets/chart/highchart/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
